@@ -1,0 +1,1 @@
+Theme semantic-ui package. Overrides of templates to suite semantic-ui.
