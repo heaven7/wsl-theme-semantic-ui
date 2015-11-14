@@ -17,7 +17,7 @@ Package.onUse(function(api) {
         'aldeed:template-extension@4.0.0',
         'semantic:ui-css@1.9.3',
         'semantic:ui@1.12.1_1',
-        'semantic:ui-data',
+        'semantic:ui-data@1.12.1_1',
         'semantic:ui-icon@1.9.3',
         'semantic:ui-item@1.9.2',
         'semantic:ui-container@2.1.5',
