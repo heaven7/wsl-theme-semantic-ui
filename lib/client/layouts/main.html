@@ -1,0 +1,37 @@
+<template name="sui_layoutMain">
+    <div class="ui borderless main menu" id="mainmenu">
+        {{> logo}}
+        {{> yield "nav"}}
+    </div>
+    <div class="ui container">
+        {{> yield "aside"}}
+        {{> yield}}
+        {{> yield "footer" }}
+    </div>
+</template>
+
+<template name="sui_logo">
+    <div class="item">[Logo]</div>
+</template>
+
+<template name="sui_nav">
+        <a class="item" href="#">Share & Care</a>
+        <a class="item" href="#">Wishes & Dreams</a>
+        <a class="item" href="#">Teach & learn</a>
+        <a class="item" href="#">Play & Celebrate</a>
+    {{#if loggedIn }}
+        <a href="#" class="ui right floated dropdown item" id="profile">
+            <i class="dropdown icon"></i>{{_ "profile"}}
+            <div class="menu transition hidden" tabindex="-1">
+                <div class="item"><a href="{{pathFor "dashboard"}}">{{_ "dashboard"}}</a></div>
+                <div class="item"><a href="{{pathFor "items"}}">{{_ "items"}}</a></div>
+                <div class="item"><a href="{{pathFor "projects"}}">{{_ "projects"}}</a></div>
+                <div class="divider"></div>
+                <div class="item"><a href="{{pathFor "logout"}}">{{_ "logout"}}</a></div>
+            </div>
+        </a>
+    {{else}}
+        <a href="{{pathFor "login"}}" class="item right">Login</a>
+        <a href="{{pathFor "signup"}}" class="item right">Register</a>
+    {{/if}}
+</template>

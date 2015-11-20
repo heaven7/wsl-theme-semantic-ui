@@ -77,6 +77,7 @@ Package.onUse(function(api) {
 
     api.addFiles([
         'lib/client/startup.js',
+        'lib/client/layouts/main.html',
         'lib/client/layouts/main.js',
         'lib/client/semantic-ui/custom.semantic.json',
         'lib/client/wsl-projects/templates.html',
