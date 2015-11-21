@@ -1,4 +1,4 @@
-<template name="sui_projectPage">
+<template name="ui_projectPage">
     {{> projectDropdownMenu}}
     {{> insertTaskCategoryModal doc=_id docType="Projects"}}
     {{> inviteMembersModal doc=_id docType="Projects"}}
@@ -11,8 +11,6 @@
         {{#if categoryExists}}
             {{> taskCategoriesList doc=_id docType="Projects"}}
         {{/if}}
-
-        <small><button class="deleteProject">Delete</button></small>
         {{> membershipButton collection='Projects' _id=_id }}
     {{/ if}}
 </template>
