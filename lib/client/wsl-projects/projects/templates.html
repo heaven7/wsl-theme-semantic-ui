@@ -2,6 +2,8 @@
     {{> projectDropdownMenu}}
     {{> insertTaskCategoryModal doc=_id docType="Projects"}}
     {{> inviteMembersModal doc=_id docType="Projects"}}
+    {{> showSettingsModal doc=_id docType="Projects"}}
+
     {{# if selectedProject}}
         {{> editProjectForm doc=this}}
     {{else}}
@@ -27,6 +29,9 @@
             </div>
             <div class="item">
                 <a href="#" class="editProject">Edit Project</a>
+            </div>
+            <div class="item">
+                <a href="#" class="showSettings">Settings</a>
             </div>
             <div class="divider"></div>
             <div class="item">

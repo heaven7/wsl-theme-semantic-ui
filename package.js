@@ -66,7 +66,7 @@ Package.onUse(function(api) {
         'semantic:ui-flag@1.9.3',
         'semantic:ui-video@1.9.3',
         'semantic:ui-ad@2.1.5',
-        'fabienb4:autoform-semantic-ui@0.1.3',
+        'fabienb4:autoform-semantic-ui@0.8.0',
         'flemay:less-autoprefixer@1.0.2',
         'jquery'
     ];
@@ -80,8 +80,10 @@ Package.onUse(function(api) {
         'lib/client/layouts/main.html',
         'lib/client/layouts/main.js',
         'lib/client/semantic-ui/custom.semantic.json',
-        'lib/client/wsl-projects/templates.html',
-        'lib/client/wsl-projects/templates.js',
+        'lib/client/wsl-projects/projects/templates.html',
+        'lib/client/wsl-projects/projects/templates.js',
+        'lib/client/wsl-projects/settings/templates.html',
+        'lib/client/wsl-projects/settings/templates.js',
         'lib/client/wsl-tasks/tasks/templates.html',
         'lib/client/wsl-tasks/tasks/templates.js',
         'lib/client/wsl-tasks/taskCategories/templates.html',

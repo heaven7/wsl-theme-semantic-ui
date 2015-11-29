@@ -1,4 +1,5 @@
 <template name="ui_layoutMain">
+    {{> wAlert}}
     <div class="ui borderless main menu" id="mainmenu">
         {{> logo}}
         {{> yield "nav"}}
@@ -21,7 +22,7 @@
         <a class="item" href="#">Play & Celebrate</a>
     {{#if loggedIn }}
         <a href="#" class="ui right floated dropdown item" id="profile">
-            <i class="dropdown icon"></i>{{_ "profile"}}
+            <i class="dropdown icon"></i>{{currentUser.username}}
             <div class="menu transition hidden" tabindex="-1">
                 <div class="item"><a href="{{pathFor "dashboard"}}">{{_ "dashboard"}}</a></div>
                 <div class="item"><a href="{{pathFor "items"}}">{{_ "items"}}</a></div>

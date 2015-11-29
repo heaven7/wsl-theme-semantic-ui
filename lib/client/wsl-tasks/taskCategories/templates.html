@@ -1,11 +1,11 @@
-<template name="sui_insertTaskCategoryForm">
+<template name="ui_insertTaskCategoryForm">
     {{#autoForm collection="TaskCategories" meteormethod="newTaskCategory" type="insert" id="insertTaskCategoryForm"}}
         {{> afQuickField name='title'}}
         {{> afQuickField name='doc' value=doc type='hidden'}}
         {{> afQuickField name='docType' value=docType type='hidden'}}
         <div class="actions">
-            <button id="submitTaskCategoryForm" type="submit" class="ui left approve button">Add</button>
-            <button class="ui cancel button">Cancel</button>
+            <button id="submitTaskCategoryForm" type="submit" class="ui left approve button">{{_ "add"}}</button>
+            <button class="ui cancel button">{{_ "cancel"}}</button>
         </div>
     {{/autoForm}}
 </template>
@@ -15,7 +15,7 @@
         <i class="close icon"></i>
         <div class="header">Add Category to project</div>
         <div class="content">
-            {{> sui_insertTaskCategoryForm doc=doc docType=docType}}
+            {{> ui_insertTaskCategoryForm doc=doc docType=docType}}
         </div>
     </div>
 </template>

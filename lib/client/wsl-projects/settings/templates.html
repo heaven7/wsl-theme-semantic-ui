@@ -1,0 +1,22 @@
+<template name="ui_projectSettingsForm">
+    {{#autoForm collection="Settings" doc=settings type="update" id="projectSettingsForm" }}
+        {{> afQuickField name='public' checkboxType="toggle"}}
+        {{> afQuickField name='watchable' checkboxType="toggle"}}
+        {{> afQuickField name='commentable' checkboxType="toggle"}}
+        {{> afQuickField name='shareable' checkboxType="toggle"}}
+        <div class="actions">
+            <button id="submitUpdate" type="submit" class="ui left approve button">{{_ "update"}}</button>
+            <button class="ui cancel button">{{_ "cancel"}}</button>
+        </div>
+    {{/autoForm}}
+</template>
+
+<template name="showSettingsModal">
+    <div class="ui modal" id="showSettingsModal">
+        <i class="close icon"></i>
+        <div class="header">Projectsettings</div>
+        <div class="content">
+            {{> ui_projectSettingsForm doc=doc docType=docType}}
+        </div>
+    </div>
+</template>
