@@ -89,7 +89,8 @@ Package.onUse(function(api) {
         'lib/client/wsl-tasks/taskCategories/templates.html',
         'lib/client/wsl-tasks/taskCategories/templates.js',
         'lib/client/wsl-memberships/templates.html',
-        'lib/client/wsl-memberships/templates.js'
+        'lib/client/wsl-memberships/templates.js',
+        'lib/client/wsl-memberships/hooks.js'
     ], 'client');
 
     api.addFiles([
