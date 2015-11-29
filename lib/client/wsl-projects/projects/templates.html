@@ -18,20 +18,20 @@
         <i class="wrench icon"></i>
         <div class="menu">
             <div class="item">
-                <a href="#" class="inviteMembers">Invite Members</a>
+                <a href="#" class="inviteMembers">{{_ "invite_members"}}</a>
             </div>
             <div class="item">
-                <a href="#" class="addTaskCategory">Add Category</a>
+                <a href="#" class="addTaskCategory">{{_ "add_category"}}</a>
             </div>
             <div class="item">
-                <a href="#" class="editProject">Edit Project</a>
+                <a href="#" class="editProject">{{_ "edit_project"}}</a>
             </div>
             <div class="item">
-                <a href="#" class="showSettings">Settings</a>
+                <a href="#" class="showSettings">{{_ "settings"}}</a>
             </div>
             <div class="divider"></div>
             <div class="item">
-                <a href="#" class="deleteProject">Delete Project</a>
+                <a href="#" class="deleteProject">{{_ "delete_project"}}</a>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@
 <template name="editProjectModal">
     <div class="ui modal" id="editProjectModal">
         <i class="close icon"></i>
-        <div class="header">Edit project</div>
+        <div class="header">{{_ "edit_project"}}</div>
         <div class="content">
             {{> ui_editProjectForm doc=doc}}
         </div>
