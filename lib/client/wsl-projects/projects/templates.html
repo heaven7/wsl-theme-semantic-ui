@@ -2,19 +2,15 @@
     {{> projectDropdownMenu}}
     {{> insertTaskCategoryModal doc=_id docType="Projects"}}
     {{> inviteMembersModal doc=_id docType="Projects"}}
+    {{> editProjectModal doc=this}}
     {{> showSettingsModal doc=_id docType="Projects"}}
 
-    {{# if selectedProject}}
-        {{> editProjectForm doc=this}}
-    {{else}}
-
-        <h4>{{title}}</h4>
-        <p>{{description}}<span><small> - {{createdAt}}</small></span></p>
-        {{#if categoryExists}}
-            {{> taskCategoriesList doc=_id docType="Projects"}}
-        {{/if}}
-        {{> membershipButton collection='Projects' _id=_id }}
-    {{/ if}}
+    <h4>{{title}}</h4>
+    <p>{{description}}<span><small> - {{createdAt}}</small></span></p>
+    {{#if categoryExists}}
+        {{> taskCategoriesList doc=_id docType="Projects"}}
+    {{/if}}
+    {{> membershipButton collection='Projects' _id=_id }}
 </template>
 
 <template name="projectDropdownMenu">
@@ -39,4 +35,26 @@
             </div>
         </div>
     </div>
+</template>
+
+
+<template name="editProjectModal">
+    <div class="ui modal" id="editProjectModal">
+        <i class="close icon"></i>
+        <div class="header">Edit project</div>
+        <div class="content">
+            {{> ui_editProjectForm doc=doc}}
+        </div>
+    </div>
+</template>
+
+<template name="ui_editProjectForm">
+    {{#autoForm collection="Projects" doc=doc meteormethod="updateProject" type="update" id="editProjectForm"}}
+        {{> afQuickField name='title'}}
+        {{> afQuickField name='description'}}
+        <div class="actions">
+            <button id="submitUpdate" type="submit" class="ui left approve button">{{_ "update"}}</button>
+            <button class="ui cancel button">{{_ "cancel"}}</button>
+        </div>
+    {{/autoForm}}
 </template>
