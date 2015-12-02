@@ -75,6 +75,8 @@ Package.onUse(function(api) {
 
     api.imply(packages);
 
+    api.addAssets(['lib/client/layouts/main.less'], 'client');
+
     api.addFiles([
         'lib/client/startup.js',
         'lib/client/layouts/main.html',
@@ -84,6 +86,8 @@ Package.onUse(function(api) {
         'lib/client/wsl-projects/projects/templates.js',
         'lib/client/wsl-projects/settings/templates.html',
         'lib/client/wsl-projects/settings/templates.js',
+        'lib/client/wsl-projects/members/templates.html',
+        'lib/client/wsl-projects/members/templates.js',
         'lib/client/wsl-tasks/tasks/templates.html',
         'lib/client/wsl-tasks/tasks/templates.js',
         'lib/client/wsl-tasks/taskCategories/templates.html',

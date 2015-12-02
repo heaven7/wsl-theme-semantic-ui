@@ -7,6 +7,9 @@
 
     <h4>{{title}}</h4>
     <p>{{description}}<span><small> - {{createdAt}}</small></span></p>
+    <a href="{{pathFor 'project.members'}}">
+        <i class="users icon"></i>{{_ "members_count"}} {{membershipsCount _id}}
+    </a>
     {{#if categoryExists}}
         {{> taskCategoriesList doc=_id docType="Projects"}}
     {{/if}}
