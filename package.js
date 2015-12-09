@@ -82,6 +82,7 @@ Package.onUse(function(api) {
         'lib/client/layouts/main.html',
         'lib/client/layouts/main.js',
         'lib/client/semantic-ui/custom.semantic.json',
+        'lib/client/images/templates.html',
         'lib/client/wsl-projects/projects/templates.html',
         'lib/client/wsl-projects/projects/templates.js',
         'lib/client/wsl-projects/settings/templates.html',

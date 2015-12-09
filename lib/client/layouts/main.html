@@ -22,7 +22,13 @@
         <a class="item" href="#">Play & Celebrate</a>
     {{#if loggedIn }}
         <a href="#" class="ui right floated dropdown item" id="profile">
-            <i class="dropdown icon"></i>{{currentUser.username}}
+            {{#if currentUser.profile.picture}}
+                {{#with getDoc currentUser.profile.picture 'Images'}}
+                    {{> ui_image_avatar username=currentUser.username url=url store="thumbs"}}
+                {{/with}}
+            {{else}}
+                {{currentUser.username}}
+            {{/if}}
             <div class="menu transition hidden" tabindex="-1">
                 <div class="item"><a href="{{pathFor "dashboard"}}">{{_ "dashboard"}}</a></div>
                 <div class="item"><a href="{{pathFor "items"}}">{{_ "items"}}</a></div>
