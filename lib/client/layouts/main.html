@@ -24,7 +24,7 @@
         <a href="#" class="ui right floated dropdown item" id="profile">
             {{#if currentUser.profile.picture}}
                 {{#with getDoc currentUser.profile.picture 'Images'}}
-                    {{> ui_image_avatar username=currentUser.username url=url store="thumbs"}}
+                    {{> image_avatar username=currentUser.username url=url store="thumbs"}}
                 {{/with}}
             {{else}}
                 {{currentUser.username}}

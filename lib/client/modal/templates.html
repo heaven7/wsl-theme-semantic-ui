@@ -1,0 +1,9 @@
+<template name="showModal">
+    <div class="ui modal" id="{{id}}">
+        <i class="close icon"></i>
+        <div class="header">{{header}}</div>
+        <div class="content">
+            {{>Template.dynamic template=content data=data}}
+        </div>
+    </div>
+</template>

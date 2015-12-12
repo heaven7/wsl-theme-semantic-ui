@@ -82,7 +82,19 @@ Package.onUse(function(api) {
         'lib/client/layouts/main.html',
         'lib/client/layouts/main.js',
         'lib/client/semantic-ui/custom.semantic.json',
+
+        // ui components
+        'lib/client/buttons/templates.html',
+        'lib/client/buttons/templates.js',
+        'lib/client/forms/search.html',
+        'lib/client/forms/search.js',
+        'lib/client/forms/actions.html',
+        'lib/client/forms/actions.js',
+        'lib/client/modal/templates.html',
+        'lib/client/modal/templates.js',
         'lib/client/images/templates.html',
+
+        // package components
         'lib/client/wsl-projects/projects/templates.html',
         'lib/client/wsl-projects/projects/templates.js',
         'lib/client/wsl-projects/settings/templates.html',
@@ -99,5 +111,6 @@ Package.onUse(function(api) {
     ], 'client');
 
     api.addFiles([
+        'lib/both/ui.js'
     ], both);
 });
