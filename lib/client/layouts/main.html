@@ -16,29 +16,31 @@
 </template>
 
 <template name="ui_nav">
-        <a class="item" href="#">Share & Care</a>
-        <a class="item" href="#">Wishes & Dreams</a>
-        <a class="item" href="#">Teach & learn</a>
-        <a class="item" href="#">Play & Celebrate</a>
-    {{#if loggedIn }}
-        <a href="#" class="ui right floated dropdown item" id="profile">
-            {{#if currentUser.profile.picture}}
-                {{#with getDoc currentUser.profile.picture 'Images'}}
-                    {{> image_avatar username=currentUser.username url=url store="thumbs"}}
-                {{/with}}
-            {{else}}
-                {{currentUser.username}}
-            {{/if}}
-            <div class="menu transition hidden" tabindex="-1">
-                <div class="item"><a href="{{pathFor "dashboard"}}">{{_ "dashboard"}}</a></div>
-                <div class="item"><a href="{{pathFor "items"}}">{{_ "items"}}</a></div>
-                <div class="item"><a href="{{pathFor "projects"}}">{{_ "projects"}}</a></div>
-                <div class="divider"></div>
-                <div class="item"><a href="{{pathFor "logout"}}">{{_ "logout"}}</a></div>
-            </div>
-        </a>
-    {{else}}
-        <a href="{{pathFor "login"}}" class="item right">Login</a>
-        <a href="{{pathFor "signup"}}" class="item right">Register</a>
-    {{/if}}
+    <a class="item" href="#">Share & Care</a>
+    <a class="item" href="#">Wishes & Dreams</a>
+    <a class="item" href="#">Teach & learn</a>
+    <a class="item" href="#">Play & Celebrate</a>
+    <div class="right menu">
+        {{#if loggedIn }}
+            <a href="#" class="ui right dropdown item" id="profile">
+                {{#if currentUser.profile.picture}}
+                    {{#with getDoc currentUser.profile.picture 'Images'}}
+                        {{> image_avatar username=currentUser.username url=url store="thumbs"}}
+                    {{/with}}
+                {{else}}
+                    {{currentUser.username}}
+                {{/if}}
+                <div class="menu" tabindex="0">
+                    <div class="item"><a href="{{pathFor "dashboard"}}">{{_ "dashboard"}}</a></div>
+                    <div class="item"><a href="{{pathFor "items"}}">{{_ "items"}}</a></div>
+                    <div class="item"><a href="{{pathFor "projects"}}">{{_ "projects"}}</a></div>
+                    <div class="divider"></div>
+                    <div class="item"><a href="{{pathFor "logout"}}">{{_ "logout"}}</a></div>
+                </div>
+            </a>
+        {{else}}
+            <a href="{{pathFor "login"}}" class="ui item">Login</a>
+            <a href="{{pathFor "signup"}}" class="ui item">Register</a>
+        {{/if}}
+    </div>
 </template>
