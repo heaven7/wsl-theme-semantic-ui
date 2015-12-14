@@ -3,9 +3,14 @@
         {{text}}
     </button>
 </template>
+
 <template name="button_with_icon">
     <button class="ui button {{class}}" type="{{type}}" id="{{id}}">
         <i class="{{icon}} icon"></i>
         {{text}}
     </button>
+</template>
+
+<template name="button_icon_only">
+    <div class="ui icon button {{class}}" id="{{id}}" data-title="{{title}}" data-content="{{content}}"><i class="{{icon}} icon"></i></div>
 </template>

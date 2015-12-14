@@ -1,0 +1,10 @@
+<template name="accordion">
+    <div class="{{#unless nested}} ui {{/unless}} {{#if nested}} nested {{/if}} accordion {{class}}" id="{{id}}">
+        {{#each collection}}
+            <div class="title"><h4>{{this.title}}</h4></div>
+            <div class="content">
+                {{> UI.dynamic template=template}}
+            </div>
+        {{/each}}
+    </div>
+</template>
