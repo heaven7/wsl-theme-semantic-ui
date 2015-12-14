@@ -46,6 +46,7 @@ Package.onUse(function(api) {
         'lib/client/forms/search.js',
         'lib/client/forms/actions.html',
         'lib/client/forms/actions.js',
+        'lib/client/icons/templates.html',
         'lib/client/images/templates.html',
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
