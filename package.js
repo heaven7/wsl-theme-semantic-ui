@@ -42,6 +42,8 @@ Package.onUse(function(api) {
         'lib/client/accordion/templates.js',
         'lib/client/buttons/templates.html',
         'lib/client/buttons/templates.js',
+        'lib/client/cards/templates.html',
+        'lib/client/cards/templates.js',
         'lib/client/forms/search.html',
         'lib/client/forms/search.js',
         'lib/client/forms/actions.html',
@@ -51,6 +53,7 @@ Package.onUse(function(api) {
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
         'lib/client/popup/templates.js',
+        'lib/client/text/templates.html',
 
         // package components
         'lib/client/wsl-projects/projects/templates.html',

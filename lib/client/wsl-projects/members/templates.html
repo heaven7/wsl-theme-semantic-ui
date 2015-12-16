@@ -1,4 +1,4 @@
 <template name="projectMembers">
-    <h2 class="ui center aligned icon header"><i class="circular users icon"></i>{{_ "members"}}</h2>
+    {{> h2_with_icon icon="user" text=membersText}}
     {{> userListWithRoles users=members}}
 </template>

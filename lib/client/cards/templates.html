@@ -1,0 +1,33 @@
+<template name="cards">
+    <div class="ui cards" id="{{id}}">
+        {{#if collection}}
+            {{#each collection}}
+                <div class="card link">
+                    {{> UI.dynamic template=template}}
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
+</template>
+
+<template name="card">
+    <div class="content">
+        <div class="header">
+            <a href="{{pathFor route='project.show'}}">{{title}}</a>
+        </div>
+        <div class="meta">
+            {{meta}}
+        </div>
+        <div class="description">
+            {{description}}
+        </div>
+        <div class="extra content">
+            <span class="right floated">
+                {{> UI.dynamic template=extra_content1}}
+            </span>
+            <span>
+                {{> UI.dynamic template=extra_content2}}
+            </span>
+        </div>
+    </div>
+</template>
