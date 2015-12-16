@@ -11,23 +11,40 @@
 </template>
 
 <template name="card">
+    {{#if image}}
+        <a href="{{pathFor route='project.show'}}">
+            {{#with getDoc image 'Images'}}
+                <div class="image">
+                    {{> image_card url=url}}
+                </div>
+            {{/with}}
+        </a>
+    {{/if}}
     <div class="content">
         <div class="header">
             <a href="{{pathFor route='project.show'}}">{{title}}</a>
         </div>
-        <div class="meta">
-            {{meta}}
-        </div>
-        <div class="description">
-            {{description}}
-        </div>
+        {{#if meta}}
+            <div class="meta">
+                {{meta}}
+            </div>
+        {{/if}}
+        {{#if description}}
+            <div class="description">
+                {{description}}
+            </div>
+        {{/if}}
         <div class="extra content">
-            <span class="right floated">
-                {{> UI.dynamic template=extra_content1}}
-            </span>
-            <span>
-                {{> UI.dynamic template=extra_content2}}
-            </span>
+            {{#if extra_content1}}
+                <span class="right floated">
+                    {{> UI.dynamic template=extra_content1}}
+                </span>
+            {{/if}}
+            {{#if extra_content2}}
+                <span>
+                    {{> UI.dynamic template=extra_content2}}
+                </span>
+            {{/if}}
         </div>
     </div>
 </template>

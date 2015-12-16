@@ -44,6 +44,7 @@ Package.onUse(function(api) {
         'lib/client/buttons/templates.js',
         'lib/client/cards/templates.html',
         'lib/client/cards/templates.js',
+        'lib/client/divider/templates.html',
         'lib/client/forms/search.html',
         'lib/client/forms/search.js',
         'lib/client/forms/actions.html',
