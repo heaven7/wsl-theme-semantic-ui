@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-theme-semantic-ui',
-  version: '0.0.1',
+  version: '0.0.3',
   summary: 'Theme semantic ui package',
   git: 'https://github.com/heaven7/wsl-theme-semantic-ui.git',
   documentation: 'README.md'
@@ -8,8 +8,8 @@ Package.describe({
 
 var both = ['client','server'],
     packages = [
-    'heaven7:wsl-core@0.0.2',
-    'heaven7:wsl-i18n@0.0.2',
+    'heaven7:wsl-core@0.0.3',
+    'heaven7:wsl-i18n@0.0.3',
     'aldeed:template-extension@4.0.0',
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.6',
