@@ -13,7 +13,7 @@ var both = ['client','server'],
     'aldeed:template-extension@4.0.0',
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.6',
-    'semantic:ui-data',
+    'semantic:ui-data@2.1.6',
     'fabienb4:autoform-semantic-ui@0.8.0',
     'flemay:less-autoprefixer@1.2.0',
     'jquery'
