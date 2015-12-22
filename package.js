@@ -6,25 +6,22 @@ Package.describe({
   documentation: 'README.md'
 });
 
-both = ['client','server'];
+var both = ['client','server'],
+    packages = [
+    'heaven7:wsl-core@0.0.2',
+    'heaven7:wsl-i18n@0.0.2',
+    'aldeed:template-extension@4.0.0',
+    'semantic:ui-css@2.1.2',
+    'semantic:ui@2.1.6',
+    'semantic:ui-data',
+    'fabienb4:autoform-semantic-ui@0.8.0',
+    'flemay:less-autoprefixer@1.2.0',
+    'jquery'
+];
 
 Package.onUse(function(api) {
     api.versionsFrom('1.2');
-
-    var packages = [
-        'heaven7:wsl-core@0.0.2',
-        'heaven7:wsl-i18n@0.0.2',
-        'aldeed:template-extension@4.0.0',
-        'semantic:ui-css@2.1.2',
-        'semantic:ui@2.1.6',
-        'semantic:ui-data',
-        'fabienb4:autoform-semantic-ui@0.8.0',
-        'flemay:less-autoprefixer@1.2.0',
-        'jquery'
-    ];
-
     api.use(packages, both);
-
     api.imply(packages);
 
     api.addAssets([
@@ -45,6 +42,8 @@ Package.onUse(function(api) {
         'lib/client/cards/templates.html',
         'lib/client/cards/templates.js',
         'lib/client/divider/templates.html',
+        'lib/client/dropdown/templates.html',
+        'lib/client/dropdown/templates.js',
         'lib/client/forms/search.html',
         'lib/client/forms/search.js',
         'lib/client/forms/actions.html',
@@ -54,22 +53,7 @@ Package.onUse(function(api) {
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
         'lib/client/popup/templates.js',
-        'lib/client/text/templates.html',
-
-        // package components
-        'lib/client/wsl-projects/projects/templates.html',
-        'lib/client/wsl-projects/projects/templates.js',
-        'lib/client/wsl-projects/settings/templates.html',
-        'lib/client/wsl-projects/settings/templates.js',
-        'lib/client/wsl-projects/members/templates.html',
-        'lib/client/wsl-projects/members/templates.js',
-        'lib/client/wsl-tasks/tasks/templates.html',
-        'lib/client/wsl-tasks/tasks/templates.js',
-        'lib/client/wsl-tasks/taskCategories/templates.html',
-        'lib/client/wsl-tasks/taskCategories/templates.js',
-        'lib/client/wsl-memberships/templates.html',
-        'lib/client/wsl-memberships/templates.js',
-        'lib/client/wsl-memberships/hooks.js'
+        'lib/client/text/templates.html'
     ], 'client');
 
     api.addFiles([

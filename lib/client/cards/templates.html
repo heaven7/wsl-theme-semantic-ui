@@ -12,7 +12,7 @@
 
 <template name="card">
     {{#if image}}
-        <a href="{{pathFor route='project.show'}}">
+        <a href="{{pathFor route=route}}">
             {{#with getDoc image 'Images'}}
                 <div class="image">
                     {{> image_card url=url}}
@@ -22,7 +22,7 @@
     {{/if}}
     <div class="content">
         <div class="header">
-            <a href="{{pathFor route='project.show'}}">{{title}}</a>
+            <a href="{{pathFor route=route}}">{{title}}</a>
         </div>
         {{#if meta}}
             <div class="meta">

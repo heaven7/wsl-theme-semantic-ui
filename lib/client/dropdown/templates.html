@@ -1,0 +1,18 @@
+<template name="dropdownMenuWithRoles">
+    <div class="ui dropdown {{class}}">
+        <i class="{{icon}} icon"></i>
+        <div class="menu">
+            {{#each items}}
+                {{#if divider}}
+                    <div class="divider"></div>
+                {{else}}
+                    {{#if isInRole roles group}}
+                    <div class="item">
+                        <a href="#" class="{{itemclass}}">{{itemtext}}</a>
+                    </div>
+                    {{/if}}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+</template>
