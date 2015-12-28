@@ -10,7 +10,6 @@ var both = ['client','server'],
     packages = [
     'heaven7:wsl-core@0.0.3',
     'heaven7:wsl-i18n@0.0.3',
-    'aldeed:template-extension@4.0.0',
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.6',
     'semantic:ui-data@2.1.6',
