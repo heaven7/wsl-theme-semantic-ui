@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-theme-semantic-ui',
-  version: '0.0.3',
+  version: '0.0.3_1',
   summary: 'Theme semantic ui package',
   git: 'https://github.com/heaven7/wsl-theme-semantic-ui.git',
   documentation: 'README.md'
