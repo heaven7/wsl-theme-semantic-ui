@@ -13,7 +13,7 @@ var both = ['client','server'],
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.6',
     'semantic:ui-data@2.1.6',
-    'fabienb4:autoform-semantic-ui@0.8.0',
+    'fabienb4:autoform-semantic-ui@0.9.1',
     'flemay:less-autoprefixer@1.2.0',
     'jquery'
 ];
@@ -52,7 +52,9 @@ Package.onUse(function(api) {
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
         'lib/client/popup/templates.js',
-        'lib/client/text/templates.html'
+        'lib/client/text/templates.html',
+        'lib/client/user/templates.html',
+        'lib/client/user/templates.js'
     ], 'client');
 
     api.addFiles([
