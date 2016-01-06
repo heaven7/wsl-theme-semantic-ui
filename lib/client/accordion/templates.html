@@ -3,6 +3,11 @@
         {{#each collection}}
             <div class="title"><h4>{{this.title}}</h4></div>
             <div class="content">
+                <div class="ui secondary menu">
+                    <div class="right menu">
+                        {{> icon icon="tasks" class="right link toggleAll"}}
+                    </div>
+                </div>
                 {{> UI.dynamic template=template}}
             </div>
         {{/each}}
