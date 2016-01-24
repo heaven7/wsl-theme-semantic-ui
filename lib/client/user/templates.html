@@ -1,3 +1,20 @@
+<template name="userListWithRoles">
+    {{#each users}}
+        {{> userWithRole}}
+    {{/each}}
+</template>
+
+<template name="userWithRole">
+    <a class="ui label" href="#">
+        {{#if profile.picture}}
+            {{#with getDoc profile.picture 'Images'}}
+                {{> image_thumb style="circular" url=url store="thumbs" size="tiny"}}
+            {{/with}}
+        {{/if}}
+        <span>{{username}}</span>
+    </a>
+</template>
+
 <template name="avatar_small">
     {{#if user.profile.picture}}
         {{#with getDoc user.profile.picture 'Images'}}
