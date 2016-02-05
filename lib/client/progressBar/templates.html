@@ -1,0 +1,10 @@
+<template name="progressBar">
+    <div class="ui progress {{class}}" id="{{id}}" data-percent="{{percent}}">
+        <div class="bar">
+            <div class="progress">{{percent}} %</div>
+        </div>
+        {{#if label}}
+            <div class="label">{{label}}</div>
+        {{/if}}
+    </div>
+</template>

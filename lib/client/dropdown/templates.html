@@ -1,6 +1,6 @@
 <template name="dropdownMenuWithRoles">
-    <div class="ui dropdown {{class}}">
-        <i class="{{icon}} icon"></i>
+    <div class="ui dropdown {{class}}" id="{{id}}">
+        {{#if icon}} <i class="{{icon}} icon"></i> {{/if}}
         <div class="menu">
             {{#each items}}
                 {{#if divider}}
@@ -14,5 +14,33 @@
                 {{/if}}
             {{/each}}
         </div>
+    </div>
+</template>
+
+<template name="selectDropdown">
+    <div class="ui dropdown {{class}}" id="{{id}}">
+        <input type="hidden" name="{{name}}">
+        <div class="default text">{{placeholder}}</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            {{#each items}}
+                <div {{itemHtmlAtts}} data-value="{{value}}">{{label}}</div>
+            {{/each}}
+        </div>
+    </div>
+</template>
+
+<template name="selectDropdownRecursive">
+    <div {{itemHtmlAtts}} data-value="{{this.value}}">
+        {{#if this.icon}}
+            <i class="{{this.icon}}"></i>
+        {{/if}}
+        {{#if this.circularLabel}}
+            <div class="ui {{this.circularLabel}} empty circular label"></div>
+        {{/if}}
+        {{#if this.description}}
+            <span class="description">{{this.description}}</span>
+        {{/if}}
+        {{this.label}}
     </div>
 </template>

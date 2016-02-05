@@ -13,7 +13,6 @@ var both = ['client','server'],
     'semantic:ui@2.1.6',
     'semantic:ui-data@2.1.6',
     'fabienb4:autoform-semantic-ui@0.9.1',
-    'fabienb4:semantic-ui-components@0.5.0',
     'flemay:less-autoprefixer@1.2.0',
     'jquery'
 ];
@@ -24,14 +23,11 @@ Package.onUse(function(api) {
     api.imply(packages);
 
     api.addAssets([
-        'lib/client/layouts/main.less',
         'lib/client/semantic-ui/custom.semantic.json'
     ], 'client');
 
     api.addFiles([
         'lib/client/startup.js',
-        'lib/client/layouts/main.html',
-        'lib/client/layouts/main.js',
 
         // ui components
         'lib/client/accordion/templates.html',
@@ -52,6 +48,8 @@ Package.onUse(function(api) {
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
         'lib/client/popup/templates.js',
+        'lib/client/progressBar/templates.html',
+        'lib/client/progressBar/templates.js',
         'lib/client/text/templates.html',
         'lib/client/user/templates.html',
         'lib/client/user/templates.js'
