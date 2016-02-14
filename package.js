@@ -1,6 +1,6 @@
 Package.describe({
   name: 'heaven7:wsl-theme-semantic-ui',
-  version: '0.0.3_3',
+  version: '0.0.3_5',
   summary: 'Theme semantic ui package',
   git: 'https://github.com/heaven7/wsl-theme-semantic-ui.git',
   documentation: 'README.md'
@@ -8,13 +8,15 @@ Package.describe({
 
 var both = ['client','server'],
     packages = [
-    'heaven7:wsl-core@0.0.3_1',
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.8',
     'semantic:ui-data@2.1.8',
     'fabienb4:autoform-semantic-ui@0.9.3',
     'flemay:less-autoprefixer@1.2.0',
-    'jquery'
+    'jquery',
+    'blaze-html-templates',
+    'ecmascript',
+    'es5-shim'
 ];
 
 Package.onUse(function(api) {
@@ -28,6 +30,7 @@ Package.onUse(function(api) {
 
     api.addFiles([
         'lib/client/startup.js',
+        'lib/client/ui.js',
 
         // ui components
         'lib/client/accordion/templates.html',
@@ -53,9 +56,6 @@ Package.onUse(function(api) {
         'lib/client/text/templates.html',
         'lib/client/user/templates.html',
         'lib/client/user/templates.js'
-    ], 'client');
+    ], ['client']);
 
-    api.addFiles([
-        'lib/both/ui.js'
-    ], both);
 });
