@@ -14,7 +14,6 @@ one ui framework to another just by encapsuling every ui component into a sepera
 - [Installation](#installation)
 - [Templates](#templates)
   - [Accordion](#accordion)
-    - [{{heading}}](#heading)
   - [Buttons](#buttons)
   - [Cards](#cards)
   - [Divider](#divider)
@@ -117,6 +116,7 @@ A card can be filled with extra content templates
 ```
 ### Dropdowns
 > Are not yet implemented fully
+
 #### dropdownMenuWithRoles
 Show dropdown items depending on roles. Note, that the `alanning:roles` packages needs to be installed to use this.
 `group` is the `_id` of the mongo collection document.
@@ -156,7 +156,9 @@ dropdownItems: function() {
 
 ### Forms
 > Not yet fully implemented
+
 Forms are builded mainly in combination with `aldeed:autoform`
+
 #### formContainer
 A simple form builder
 ```html
@@ -252,7 +254,7 @@ More information is provided to get the url and store [here](https://github.com/
 ```html
 {{> showModal template="myTemplate" id="myId" header="myHeader"}}
 ```
-
+Set your given template
 ```html
 <template name="myTemplate">
   Content of your modal
