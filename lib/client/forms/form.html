@@ -1,0 +1,34 @@
+<template name="formContainer">
+    <div class="ui form {{class}}" id="{{id}}">
+        {{#if headerText}}
+            <h3 class="ui header">{{headerText}}</h3>
+        {{/if}}
+        {{#if headerDescription}}
+            <p>{{{headerDescription}}}</p>
+        {{/if}}
+        {{#each fields}}
+            {{> formField}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="formField">
+    <div class="field">
+        {{#if label}}
+        <label>{{label}}</label>
+        {{/if}}
+        {{#if $eq type 'button'}}
+            {{#if icon}}
+                {{#if text}}
+                    {{> button_with_icon icon=icon text=text type=buttonType class=class id=id}}
+                {{else}}
+                    {{> button_icon_only icon=icon type=buttonType class=class id=id}}
+                {{/if}}
+            {{else}}
+                {{> button text=text type=buttonType class=class id=id}}
+            {{/if}}
+        {{else}}
+            <input {{readonly}} type="{{type}}" class="{{class}}" name="{{name}}" placeholder="{{placeholder}}" value="{{value}}" id="{{id}}">
+        {{/if}}
+    </div>
+</template>

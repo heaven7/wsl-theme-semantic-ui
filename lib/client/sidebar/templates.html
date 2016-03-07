@@ -1,0 +1,25 @@
+<template name="sidebar">
+    <div class="ui {{class}} sidebar" id="{{id}}">
+      {{#each items}}
+        {{> sidebarItem}}
+      {{/each}}
+    </div>
+</template>
+
+<template name="sidebarItem">
+  <div class="item">
+    {{#if header}} {{> header text=header}} {{/if}}
+    {{#if menu}}
+      <div class="menu">
+        {{#each menuItems}}
+            {{> sidebarItem}}
+        {{/each}}
+      </div>
+    {{else}}
+      <a href="{{link}}" class="{{linkClass}}" id="{{linkId}}">
+        {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}  
+        {{linkText}}
+      </a>
+    {{/if}}
+  </div>
+</template>

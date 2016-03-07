@@ -1,0 +1,49 @@
+<template name="h1">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h1 class="ui {{class}} {{#if icon}} icon {{/if}} header">
+    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{text}}
+    </h1>
+</template>
+
+<template name="h2">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h2 class="ui {{class}} {{#if icon}} icon {{/if}} header">
+    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{text}}
+    </h2>
+</template>
+
+<template name="h2_with_icon">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h2 class="ui center aligned icon header"><i class="circular {{icon}} icon"></i>{{text}}</h2>
+</template>
+
+<template name="h3">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h3 class="ui {{class}} {{#if icon}} icon {{/if}} header">
+    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{text}}
+    </h3>
+</template>
+
+<template name="h4">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h4 class="ui {{class}} {{#if icon}} icon {{/if}} header">
+    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{text}}
+    </h4>
+</template>
+
+<template name="h5">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+    <h5 class="ui {{class}} {{#if icon}} icon {{/if}} header">
+    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{text}}
+    </h5>
+</template>
+
+<template name="header">
+	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
+	<div class="header {{class}}">{{text}}</div>
+</template>
