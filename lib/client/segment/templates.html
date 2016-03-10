@@ -1,0 +1,35 @@
+<template name="segments">
+    {{#if sticky}}
+        <div class="ui {{class}} segments">
+            {{#each segments}}
+                {{> segment}}
+            {{/each}}
+        </div>
+    {{else}}
+        {{#each segments}}
+            {{> segment}}
+        {{/each}}
+    {{/if}}
+</template>
+
+<template name="segment">
+    <div class="ui {{class}} segment">
+        {{#if label}}
+            <div class="ui {{labelClass}} label">
+                <span class="title">{{label}}</span>
+                {{#if labelType}}
+                    <em>{{labelType}}</em>
+                {{/if}}
+            </div>
+        {{/if}}
+        <p>
+            {{#if template}}
+                {{> Template.dynamic template=template data=data}}
+            {{/if}}
+
+            {{#if text}}
+                {{{text}}}
+            {{/if}}
+        </p>
+    </div>
+</template>

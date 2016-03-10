@@ -60,6 +60,8 @@ Package.onUse(function(api) {
         'lib/client/modal/templates.js',
         'lib/client/progressBar/templates.html',
         'lib/client/progressBar/templates.js',
+        'lib/client/segment/templates.html',
+        'lib/client/segment/templates.js',
         'lib/client/sidebar/templates.html',
         'lib/client/sidebar/templates.js',
         'lib/client/user/templates.html',

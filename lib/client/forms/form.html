@@ -13,7 +13,7 @@
 </template>
 
 <template name="formField">
-    <div class="field">
+    <div class="field {{required}}">
         {{#if label}}
         <label>{{label}}</label>
         {{/if}}
@@ -28,7 +28,20 @@
                 {{> button text=text type=buttonType class=class id=id}}
             {{/if}}
         {{else}}
-            <input {{readonly}} type="{{type}}" class="{{class}}" name="{{name}}" placeholder="{{placeholder}}" value="{{value}}" id="{{id}}">
+
+            <input
+                {{readonly}}
+                type="{{type}}"
+                class="{{class}}"
+                name="{{name}}"
+                placeholder="{{placeholder}}"
+                value="{{value}}"
+                id="{{id}}"
+                min="{{min}}"
+                max="{{max}}"
+                step="{{step}}"
+                data-schema-key="{{name}}"
+            >
         {{/if}}
     </div>
 </template>
