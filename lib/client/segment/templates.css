@@ -1,0 +1,4 @@
+.existing.segment .title + em {
+    position: absolute;
+    right: 1em;
+}

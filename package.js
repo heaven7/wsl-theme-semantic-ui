@@ -62,6 +62,7 @@ Package.onUse(function(api) {
         'lib/client/progressBar/templates.js',
         'lib/client/segment/templates.html',
         'lib/client/segment/templates.js',
+        'lib/client/segment/templates.css',
         'lib/client/sidebar/templates.html',
         'lib/client/sidebar/templates.js',
         'lib/client/user/templates.html',
