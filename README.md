@@ -253,7 +253,8 @@ More information is provided to get the url and store [here](https://github.com/
 ```
 
 ### Menus
-Create menu elements with dropdowns or a search input field.
+Create menu elements with dropdowns or form input fields.
+For options see [here](http://semantic-ui.com/collections/menu.html).
 ```html
 {{> menu items=menuItems class='myClass'}}
 ```
@@ -277,6 +278,13 @@ Template.myTemplate.helpers({
             {
                 search: true,
                 icon: 'heart'
+            },
+            {
+                form: true,
+                formClass: 'small',
+                type: 'text',
+                class: 'test3'
+
             },
             {
                 icon: 'dropdown',

@@ -22,14 +22,22 @@
 
 <template name="menuItem">
     {{#if header}}
-        {{>h4 text=header}}
+        <div class="item">
+            {{>h4 text=header}}
+        </div>
     {{else}}
         {{#if search}}
             <div class="item">
                 {{> search this}}
             </div>
         {{else}}
-            {{> menuLink this}}
+            {{#if form}}
+                <div class="ui form {{formClass}}">
+                    {{> formField this}}
+                </div>
+            {{else}}
+                {{> menuLink this}}
+            {{/if}}
         {{/if}}
     {{/if}}
 </template>
