@@ -23,6 +23,7 @@ one ui framework to another just by encapsuling every ui component into a sepera
   - [Headings](#headings)
   - [Icons](#icons)
   - [Images](#images)
+  - [Menus](#menus)
   - [Modals](#modals)
   - [progressBar](#progressbar)
   - [Contribution & support](#contribution-&-support)
@@ -249,6 +250,58 @@ More information is provided to get the url and store [here](https://github.com/
 {{> image_thumb style="centered" size="medium" url=url store="myStore"}}
 {{> image_avatar url=url store="myStore"}}
 {{> image_fluid url=url store="myStore"}}
+```
+
+### Menus
+Create menu elements with dropdowns or a search input field.
+```html
+{{> menu items=menuItems class='myClass'}}
+```
+Define an array of menuitems and/or subitems in your template helper.
+Place subitems as an array of the value property.
+```javascript
+Template.myTemplate.helpers({
+    menuItems: () => {
+        return [
+            {
+                value: 'test1',
+                class: 'test1',
+                href: 'http://www.google.de',
+                icon: 'add'
+            },
+            {
+                value: 'test2',
+                class: 'test2',
+                icon: 'remove'
+            },
+            {
+                search: true,
+                icon: 'heart'
+            },
+            {
+                icon: 'dropdown',
+                class: 'right',
+                text: 'more',
+                value: [        // subitems
+                    {
+                        header: 'headertext'
+                    },
+                    {
+                        value: 'test1',
+                        class: 'test1',
+                        href: 'http://www.google.de',
+                        icon: 'add'
+                    },
+                    {
+                        value: 'test2',
+                        class: 'test2',
+                        icon: 'remove'
+                    }
+                ]
+            }
+        ]
+    }
+})
 ```
 ### Modals
 ```html
