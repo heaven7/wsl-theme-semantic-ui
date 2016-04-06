@@ -54,6 +54,7 @@ Package.onUse(function(api) {
         'lib/client/headings/templates.html',
         'lib/client/icons/templates.html',
         'lib/client/images/templates.html',
+        'lib/client/loader/templates.html',
         'lib/client/menu/templates.html',
         'lib/client/menu/templates.js',
         'lib/client/modal/templates.html',

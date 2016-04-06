@@ -1,7 +1,9 @@
 <template name="divider">
-    <div class="ui divider"></div>
+    <div class="ui {{class}} divider">
+        {{text}}
+    </div>
 </template>
 
 <template name="divider_with_icon">
-    <h4 class="ui horizontal divider header"><i class="{{icon}} icon"></i>{{text}}</h4>
+    <h4 class="ui {{class}} horizontal divider header"><i class="{{icon}} icon"></i>{{text}}</h4>
 </template>

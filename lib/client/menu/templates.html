@@ -21,22 +21,32 @@
 </template>
 
 <template name="menuItem">
-    {{#if header}}
+    {{#if template}}
         <div class="item">
-            {{>h4 text=header}}
+            {{> Template.dynamic template=template data=data}}
         </div>
     {{else}}
-        {{#if search}}
+        {{#if header}}
             <div class="item">
-                {{> search this}}
+                {{>h4 text=header}}
             </div>
         {{else}}
-            {{#if form}}
-                <div class="ui form {{formClass}}">
-                    {{> formField this}}
+            {{#if search}}
+                <div class="item">
+                    {{> search this}}
                 </div>
             {{else}}
-                {{> menuLink this}}
+                {{#if form}}
+                    <div class="ui form {{formClass}}">
+                        {{> formField this}}
+                    </div>
+                {{else}}
+                    {{#if divider}}
+                        {{> divider this}}
+                    {{else}}
+                        {{> menuLink this}}
+                    {{/if}}
+                {{/if}}
             {{/if}}
         {{/if}}
     {{/if}}
@@ -44,7 +54,7 @@
 
 
 <template name="menuLink">
-  <a href={{href}} class="item {{class}}" id="{{id}}">
+  <a href={{href}} class="item {{class}}" id="{{id}}" {{attrs}}>
     {{#if icon}}
         {{> icon icon=icon}}
     {{/if}}
