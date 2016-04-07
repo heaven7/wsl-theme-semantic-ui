@@ -2,34 +2,58 @@
     {{#if sticky}}
         <div class="ui {{class}} segments">
             {{#each segments}}
-                {{> segment}}
+                {{#if isArray this.segments}}
+                    {{> stickySegments segments=this.segments}}
+                {{else}}
+                    {{> segment}}
+                {{/if}}
             {{/each}}
         </div>
     {{else}}
         {{#each segments}}
-            {{> segment}}
+            {{#if isArray this.segments}}
+                {{#if this.sticky}}
+                    {{> stickySegments segments=this.segments}}
+                {{else}}
+                    {{> eachSegments segments=this.segments}}
+                {{/if}}
+            {{else}}
+                {{> segment}}
+            {{/if}}
         {{/each}}
     {{/if}}
 </template>
 
-<template name="segment">
-    <div class="ui {{class}} segment">
-        {{#if label}}
-            <div class="ui {{labelClass}} label">
-                <span class="title">{{label}}</span>
-                {{#if labelType}}
-                    <em>{{labelType}}</em>
-                {{/if}}
-            </div>
-        {{/if}}
-        <p>
-            {{#if template}}
-                {{> Template.dynamic template=template data=data}}
-            {{/if}}
-
-            {{#if text}}
-                {{{text}}}
-            {{/if}}
-        </p>
+<template name="stickySegments">
+    <div class="ui {{class}} segments">
+        {{>eachSegments segments=segments}}
     </div>
+</template>
+
+<template name="eachSegments">
+    {{#each segments}}
+        {{> segment}}
+    {{/each}}
+</template>
+
+<template name="segment">
+        <div class="ui {{class}} segment">
+            {{#if label}}
+                <div class="ui {{labelClass}} label">
+                    <span class="title">{{label}}</span>
+                    {{#if labelType}}
+                        <em>{{labelType}}</em>
+                    {{/if}}
+                </div>
+            {{/if}}
+            <p>
+                {{#if template}}
+                    {{> Template.dynamic template=template data=data}}
+                {{/if}}
+
+                {{#if text}}
+                    {{{text}}}
+                {{/if}}
+            </p>
+        </div>
 </template>

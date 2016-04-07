@@ -275,10 +275,12 @@ Template.myTemplate.helpers({
                 class: 'test2',
                 icon: 'remove'
             },
+            // search input field
             {
                 search: true,
                 icon: 'heart'
             },
+            // formfield
             {
                 form: true,
                 formClass: 'small',
@@ -290,7 +292,9 @@ Template.myTemplate.helpers({
                 icon: 'dropdown',
                 class: 'right',
                 text: 'more',
-                value: [        // subitems
+                // subitems
+                value: [
+                    // header
                     {
                         header: 'headertext'
                     },
@@ -330,11 +334,15 @@ or use a autoform in your modal
 </template>
 
 ```
+
 ### progressBar
 Currently only display of percent supported
 ```html
 {{> progressBar percent=80 total=100 completeClass="green" showPercent=true}}
 ```
+
+### Segment
+
 
 ### Contribution & support
 Anyone is welcome to contribute. Fork, make your changes (test them!), and then submit a pull request. Thank you.
