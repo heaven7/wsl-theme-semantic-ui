@@ -20,7 +20,9 @@
         {{#with getDoc user.profile.picture 'Images'}}
             {{> image_avatar username=user.username url=url store="thumbs"}}
         {{/with}}
-        <span>{{user.username}}</span>
+        {{#if pictureOnly}} {{else}}
+            <span>{{user.username}}</span>
+        {{/if}}
     {{else}}
         {{user.username}}
     {{/if}}

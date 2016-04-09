@@ -1,0 +1,30 @@
+<template name="comments">
+    <div class="ui comments">
+        {{#each commentItems}}
+            {{> comment}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="comment">
+    <div class="comment">
+        <a class="avatar">
+            {{> avatar_small user=user pictureOnly=true}}
+        </a>
+        <div class="content">
+            <a class="author">{{username}}</a>
+            <div class="metadata">
+                <span class="date">{{date}}</span>
+            </div>
+            <div class="text">
+                {{content}}
+            </div>
+            <div class="actions">
+                <a class="reply">{{replyText}}</a>
+                {{#if canEdit}}
+                    <a class="edit">{{editText}}</a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

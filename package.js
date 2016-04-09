@@ -42,6 +42,8 @@ Package.onUse(function(api) {
         'lib/client/buttons/templates.js',
         'lib/client/cards/templates.html',
         'lib/client/cards/templates.js',
+        'lib/client/comments/templates.html',
+        'lib/client/comments/templates.js',
         'lib/client/divider/templates.html',
         'lib/client/dropdown/templates.html',
         'lib/client/dropdown/templates.js',
