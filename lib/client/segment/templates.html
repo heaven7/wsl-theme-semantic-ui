@@ -40,7 +40,12 @@
         <div class="ui {{class}} segment">
             {{#if label}}
                 <div class="ui {{labelClass}} label">
-                    <span class="title">{{label}}</span>
+                    <span class="title">
+                        {{#if labelIcon}}
+                            {{> icon icon=labelIcon}}
+                        {{/if}}
+                        {{label}}
+                    </span>
                     {{#if labelType}}
                         <em>{{labelType}}</em>
                     {{/if}}
