@@ -24,6 +24,9 @@
             {{else}}
                 <div class="actions">
                     <a class="reply">{{replyText}}</a>
+                    {{#if canDelete}}
+                        <a class="delete">{{deleteText}}</a>
+                    {{/if}}
                 </div>
             {{/if}}
         </div>

@@ -6,11 +6,24 @@
 
 <template name="button_with_icon">
     <button class="ui button {{class}}" type="{{type}}" id="{{id}}">
-        <i class="{{icon}} icon"></i>
+        {{> icon icon=icon}}
         {{text}}
     </button>
 </template>
 
 <template name="button_icon_only">
-    <div class="ui icon button {{class}}" id="{{id}}" data-title="{{title}}" data-content="{{content}}"><i class="{{icon}} icon"></i></div>
+    <div class="ui icon button {{class}}" id="{{id}}" data-title="{{title}}" data-content="{{content}}">
+        {{> icon icon=icon}}
+    </div>
+</template>
+
+<template name="button_labeled">
+    <div class="ui {{class}} labeled button" tabindex="0">
+        <div class="ui button">
+            {{> icon icon=icon}} {{text}}
+        </div>
+        <a class="ui {{labelClass}} label">
+            {{label}}
+        </a>
+    </div>
 </template>
