@@ -1,0 +1,14 @@
+<template name="statistic">
+    <div class="ui {{class}} statistic">
+        <div class="value {{type}}">
+            {{#if icon}}
+                {{> icon icon=icon}}
+            {{/if}}
+            {{value}}
+            {{> button_icon_only icon='heart outline' class='show-item-likes circular right floated' }}
+        </div>
+        <div class="label">
+            {{label}}
+        </div>
+    </div>
+</template>
