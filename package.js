@@ -68,6 +68,7 @@ Package.onUse(function(api) {
         'lib/client/segment/templates.css',
         'lib/client/sidebar/templates.html',
         'lib/client/sidebar/templates.js',
+        'lib/client/statistics/templates.html',
         'lib/client/user/templates.html',
         'lib/client/user/templates.js'
     ], ['client']);

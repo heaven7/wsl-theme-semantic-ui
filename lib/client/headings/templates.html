@@ -1,7 +1,7 @@
 <template name="h1">
 	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
     <h1 class="ui {{class}} {{#if icon}} icon {{/if}} header">
-    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}
     {{text}}
     </h1>
 </template>
@@ -9,7 +9,7 @@
 <template name="h2">
 	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
     <h2 class="ui {{class}} {{#if icon}} icon {{/if}} header">
-    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}
     {{text}}
     </h2>
 </template>
@@ -22,7 +22,7 @@
 <template name="h3">
 	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
     <h3 class="ui {{class}} {{#if icon}} icon {{/if}} header">
-    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}
     {{text}}
     </h3>
 </template>
@@ -30,7 +30,7 @@
 <template name="h4">
 	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
     <h4 class="ui {{class}} {{#if icon}} icon {{/if}} header">
-    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}
     {{text}}
     </h4>
 </template>
@@ -38,7 +38,7 @@
 <template name="h5">
 	{{#if anchor}} <a name="{{anchor}}"></a> {{/if}}
     <h5 class="ui {{class}} {{#if icon}} icon {{/if}} header">
-    {{#if icon}} <i class="{{iconClass}} {{icon}} icon"></i> {{/if}}
+    {{#if icon}} {{> icon icon=icon class=iconClass}} {{/if}}
     {{text}}
     </h5>
 </template>
@@ -49,5 +49,7 @@
 </template>
 
 <template name="icon_header">
-    <div class="ui {{class}} icon header"><i class="{{icon}} icon"></i></div>
+    <div class="ui {{class}} icon header">
+        {{> icon icon=icon class=iconClass}}
+    </div>
 </template>
