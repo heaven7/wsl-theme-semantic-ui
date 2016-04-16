@@ -24,6 +24,9 @@
             {{else}}
                 <div class="actions">
                     <a class="reply">{{replyText}}</a>
+                    {{#if canLike}}
+                        {{> Template.dynamic template=likeTemplate}}
+                    {{/if}}
                     {{#if canDelete}}
                         <a class="delete">{{deleteText}}</a>
                     {{/if}}

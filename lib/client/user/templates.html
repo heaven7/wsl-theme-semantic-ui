@@ -18,7 +18,7 @@
 <template name="avatar_small">
     {{#if user.profile.picture}}
         {{#with getDoc user.profile.picture 'Images'}}
-            {{> image_avatar username=user.username url=url store="thumbs"}}
+            {{> image_avatar style="circular" username=user.username url=url store="thumbs"}}
         {{/with}}
         {{#if pictureOnly}} {{else}}
             <span>{{user.username}}</span>
