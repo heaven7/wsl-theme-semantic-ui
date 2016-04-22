@@ -33,6 +33,7 @@ Package.onUse(function(api) {
     ], 'client');
 
     api.addFiles([
+        'lib/client/utils.js',
         'lib/client/startup.js',
 
         // ui components
