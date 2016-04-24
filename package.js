@@ -35,6 +35,7 @@ Package.onUse(function(api) {
     api.addFiles([
         'lib/client/utils.js',
         'lib/client/startup.js',
+        'lib/client/api.js',
 
         // ui components
         'lib/client/accordion/templates.html',
@@ -60,6 +61,7 @@ Package.onUse(function(api) {
         'lib/client/loader/templates.html',
         'lib/client/menu/templates.html',
         'lib/client/menu/templates.js',
+        'lib/client/modal/api.js',
         'lib/client/modal/templates.html',
         'lib/client/modal/templates.js',
         'lib/client/progressBar/templates.html',
