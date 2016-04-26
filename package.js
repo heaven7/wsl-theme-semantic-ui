@@ -8,6 +8,8 @@ Package.describe({
 
 var both = ['client','server'],
     packages = [
+    'heaven7:date@0.0.2',
+    'dangrossman:bootstrap-daterangepicker@2.1.19',
     'semantic:ui-css@2.1.2',
     'semantic:ui@2.1.8',
     'semantic:ui-data@2.1.8',
